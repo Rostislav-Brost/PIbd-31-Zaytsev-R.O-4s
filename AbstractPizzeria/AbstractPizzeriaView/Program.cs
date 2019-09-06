@@ -1,4 +1,4 @@
-﻿using AbstractPizzeriaService.ImplementationsList;
+﻿using AbstractShopService.ImplementationsList;
 using AbstractPizzeriaService.Interfaces;
 using System;
 using System.Collections.Generic;

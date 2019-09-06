@@ -91,5 +91,10 @@ namespace AbstractPizzeriaView
         {
             LoadData();
         }
+
+        private void IngridientsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

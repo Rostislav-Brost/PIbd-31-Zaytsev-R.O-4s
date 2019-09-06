@@ -40,7 +40,7 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(9, 10);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(362, 235);
@@ -49,7 +49,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(384, 11);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(108, 56);
             this.buttonAdd.TabIndex = 1;
@@ -60,7 +60,7 @@
             // buttonUpd
             // 
             this.buttonUpd.Location = new System.Drawing.Point(384, 71);
-            this.buttonUpd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpd.Name = "buttonUpd";
             this.buttonUpd.Size = new System.Drawing.Size(108, 56);
             this.buttonUpd.TabIndex = 2;
@@ -71,7 +71,7 @@
             // buttonDel
             // 
             this.buttonDel.Location = new System.Drawing.Point(384, 131);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(108, 54);
             this.buttonDel.TabIndex = 3;
@@ -82,7 +82,7 @@
             // buttonRef
             // 
             this.buttonRef.Location = new System.Drawing.Point(384, 189);
-            this.buttonRef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRef.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRef.Name = "buttonRef";
             this.buttonRef.Size = new System.Drawing.Size(108, 56);
             this.buttonRef.TabIndex = 4;
@@ -100,9 +100,10 @@
             this.Controls.Add(this.buttonUpd);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IngridientsForm";
             this.Text = "Ингридиенты";
+            this.Load += new System.EventHandler(this.IngridientsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
