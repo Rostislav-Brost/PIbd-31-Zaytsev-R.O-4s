@@ -1,4 +1,4 @@
-﻿using AbstractShopService.ImplementationsList;
+﻿
 using AbstractPizzeriaService.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 using Unity.Lifetime;
+using System.Data.Entity;
+using AbstractPizzeriaService;
+using AbstractPizzeriaService.ImplementationsBD;
+using AbstractPizzeria;
 
 namespace AbstractPizzeriaView
 {
@@ -28,12 +32,13 @@ namespace AbstractPizzeriaView
         public static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
-            currentContainer.RegisterType<ICustomerService, CustomerServiceList>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IIngridientService, IngridientServiceList>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IWorkerService, WorkerServiceList>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IArticleService, ArticleServiceList>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IResourceService, ResourceServiceList>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IBasicService, BasicServiceList>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<DbContext, AbstractDbContext>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ICustomerService, CustomerServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IIngridientService, IngridientServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IWorkerService, WorkerServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IArticleService, ArticleServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IResourceService, ResourceServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IBasicService, BasicServiceBD>(new HierarchicalLifetimeManager());
 
             return currentContainer;
         }
